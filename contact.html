@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Crops For the Future UK</title>
+    <meta name="description" content="Get in touch with Crops For the Future UK for inquiries about our research, partnerships, or underutilised crops.">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0a79ade6d4.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon">
+    <style>
+        /* Additional page-specific styles */
+        .page-header {
+            background-color: var(--bg-light);
+            padding: var(--spacing-xxl) 0;
+            margin-bottom: var(--spacing-xxl);
+        }
+        
+        .page-header h1 {
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-xxl);
+            margin-bottom: var(--spacing-xxl);
+        }
+        
+        .contact-form {
+            background-color: var(--white);
+            border-radius: var(--radius-md);
+            padding: var(--spacing-xl);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .form-group {
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: var(--spacing-xs);
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid var(--grey-300);
+            border-radius: var(--radius-sm);
+            font-family: var(--font-body);
+            transition: border-color var(--transition-fast);
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+        }
+        
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .form-consent {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--spacing-sm);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .form-consent input {
+            margin-top: 5px;
+        }
+        
+        .form-consent label {
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+        
+        .success-message {
+            padding: var(--spacing-md);
+            background-color: #d4edda;
+            color: #155724;
+            border-radius: var(--radius-sm);
+            margin-bottom: var(--spacing-md);
+            display: none;
+        }
+        
+        .contact-info {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            border-radius: var(--radius-md);
+            padding: var(--spacing-xl);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .contact-info h2 {
+            color: var(--white);
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .contact-method {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: var(--radius-circle);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+        
+        .contact-details h3 {
+            color: var(--white);
+            font-size: 1.1rem;
+            margin-bottom: var(--spacing-xs);
+        }
+        
+        .contact-details p {
+            margin-bottom: var(--spacing-xs);
+        }
+        
+        .contact-details a {
+            color: var(--white);
+            text-decoration: underline;
+            text-decoration-color: rgba(255, 255, 255, 0.4);
+            text-underline-offset: 3px;
+        }
+        
+        .contact-details a:hover {
+            text-decoration-color: var(--white);
+        }
+        
+        .map-container {
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            height: 300px;
+            margin-top: var(--spacing-lg);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .cta-section {
+            background-color: var(--bg-light);
+            padding: var(--spacing-xxl) 0;
+            text-align: center;
+        }
+        
+        @media (max-width: 992px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: var(--spacing-xl);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="logo">
+                <a href="/">
+                    <img src="assets/images/cff-logo.svg" alt="Crops For the Future UK Logo">
+                </a>
+            </div>
+            <nav class="main-nav">
+                <button class="menu-toggle" aria-label="Toggle navigation menu">
+                    <span class="hamburger"></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about.html">About Us</a></li>
+                    <li><a href="/research.html">Research</a></li>
+                    <li><a href="/publications.html">Publications</a></li>
+                    <li><a href="/resources.html">Resources</a></li>
+                    <li><a href="/updates.html">Updates</a></li>
+                    <li><a href="/contact.html" class="active btn btn-primary">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <div class="page-header">
+            <div class="container">
+                <h1>Contact Us</h1>
+                <p class="lead">We'd love to hear from you! Get in touch with our team for inquiries, partnerships, or information.</p>
+            </div>
+        </div>
+        
+        <!-- Contact Section -->
+        <section>
+            <div class="container">
+                <div class="contact-container">
+                    <div class="contact-form">
+                        <h2>Send a Message</h2>
+                        <p>Have a question or inquiry? Fill out the form below and we'll get back to you as soon as possible.</p>
+                        
+                        <div class="success-message" id="success-message">
+                            Your message has been sent successfully. We'll get back to you shortly!
+                        </div>
+                        
+                        <form id="contact-form">
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">Subject *</label>
+                                <select id="subject" name="subject" required>
+                                    <option value="" selected disabled>Please select</option>
+                                    <option value="General Inquiry">General Inquiry</option>
+                                    <option value="Research Collaboration">Research Collaboration</option>
+                                    <option value="Media Inquiry">Media Inquiry</option>
+                                    <option value="Crop Information">Crop Information</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Message *</label>
+                                <textarea id="message" name="message" required></textarea>
+                            </div>
+                            
+                            <div class="form-consent">
+                                <input type="checkbox" id="consent" name="consent" required>
+                                <label for="consent">I consent to Crops For the Future UK collecting and storing my data for the purpose of responding to my inquiry. I understand that my data will be processed in accordance with the <a href="/privacy-policy.html">Privacy Policy</a>.</label>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
+                    </div>
+                    
+                    <div class="contact-info">
+                        <h2>Contact Information</h2>
+                        
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Address</h3>
+                                <p>CFF(UK)CIC, NIAB</p>
+                                <p>93 Lawrence Weaver Road</p>
+                                <p>Cambridge, CB3 0LG, UK</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Phone</h3>
+                                <p><a href="tel:+447850350204">(+44) 785 035 0204</a></p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Email</h3>
+                                <p><a href="mailto:sean.mayes@cropsforthefutureuk.org">sean.mayes@cropsforthefutureuk.org</a></p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Office Hours</h3>
+                                <p>Monday - Friday: 8:30am - 7:00pm GMT</p>
+                            </div>
+                        </div>
+                        
+                        <div class="map-container">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2443.9244306269983!2d0.10034091579404957!3d52.22330417976153!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8774a3e846431%3A0x36457ee46e534c7c!2sNIAB!5e0!3m2!1sen!2suk!4v1630505593000!5m2!1sen!2suk" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="container">
+                <h2>Join Our Network</h2>
+                <p>Interested in collaborating or participating in our research? We welcome partnerships from research institutions, universities, and organizations working in agriculture, food security, and sustainability.</p>
+                <a href="/about.html#partners" class="btn btn-secondary">Learn About Partnerships</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <img src="assets/images/cff-logo-white.svg" alt="Crops For the Future UK Logo" class="footer-logo">
+                    <p>Facilitating the wider use of underutilised crops for food security and sustainable agriculture.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="ResearchGate"><i class="fab fa-researchgate"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-nav">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about.html">About Us</a></li>
+                        <li><a href="/research.html">Research</a></li>
+                        <li><a href="/publications.html">Publications</a></li>
+                        <li><a href="/resources.html">Resources</a></li>
+                        <li><a href="/updates.html">Updates</a></li>
+                        <li><a href="/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-nav">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/resources.html#cropbase">Crop Base Tool</a></li>
+                        <li><a href="/resources.html#manifesto">Global Manifesto</a></li>
+                        <li><a href="/publications.html">Publications</a></li>
+                        <li><a href="/research.html#projects">Current Projects</a></li>
+                        <li><a href="/about.html#team">Our Team</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <address>
+                        <p><i class="fas fa-map-marker-alt"></i> CFF(UK)CIC, NIAB, 93 Lawrence Weaver Road, Cambridge, CB3 0LG, UK</p>
+                        <p><i class="fas fa-phone"></i> (+44) 785 035 0204</p>
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:sean.mayes@cropsforthefutureuk.org">sean.mayes@cropsforthefutureuk.org</a></p>
+                        <p><i class="fas fa-clock"></i> 8:30am - 7:00pm GMT</p>
+                    </address>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2023</span> Crops For the Future (CFF). All rights reserved.</p>
+                <ul class="footer-legal">
+                    <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="/terms.html">Terms of Use</a></li>
+                    <li><a href="/accessibility.html">Accessibility</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/test.js"></script>
+    <script>
+        // Contact form handling
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.getElementById('contact-form');
+            const successMessage = document.getElementById('success-message');
+            
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // In a real implementation, you would send the form data to the server
+                    // For this demonstration, we'll just show the success message
+                    
+                    // Show the success message
+                    successMessage.style.display = 'block';
+                    
+                    // Scroll to the success message
+                    successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    
+                    // Reset the form
+                    contactForm.reset();
+                    
+                    // Hide the success message after a few seconds
+                    setTimeout(function() {
+                        successMessage.style.display = 'none';
+                    }, 5000);
+                });
+            }
+        });
+    </script>
+</body>
+</html> 

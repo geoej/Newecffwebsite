@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crops For the Future UK | Facilitating the Wider Use of Underutilised Crops</title>
+    <meta name="description" content="Crops For the Future UK is a world leader producing excellent, innovative research on underutilised crops that is responsive to societal demands.">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0a79ade6d4.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon">
+    <style>
+        /* Temporary styles for testing */
+        .hero-image img, 
+        .about-image img,
+        .research-image img,
+        .team-image img,
+        .update-image img,
+        .placeholder-map {
+            background-color: #f0f4f8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 200px;
+            position: relative;
+        }
+        
+        .hero-image img::after, 
+        .about-image img::after,
+        .research-image img::after,
+        .team-image img::after,
+        .update-image img::after,
+        .placeholder-map::after {
+            content: "Placeholder Image";
+            position: absolute;
+            color: #666;
+            font-family: var(--font-body);
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="logo">
+                <a href="/">
+                    <img src="assets/images/cff-logo.svg" alt="Crops For the Future UK Logo">
+                </a>
+            </div>
+            <nav class="main-nav">
+                <button class="menu-toggle" aria-label="Toggle navigation menu">
+                    <span class="hamburger"></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="/" class="active">Home</a></li>
+                    <li><a href="/about.html">About Us</a></li>
+                    <li><a href="/research.html">Research</a></li>
+                    <li><a href="/publications.html">Publications</a></li>
+                    <li><a href="/resources.html">Resources</a></li>
+                    <li><a href="/updates.html">Updates</a></li>
+                    <li><a href="/contact.html" class="btn btn-primary">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Facilitating the Wider Use of Underutilised Crops</h1>
+                    <p class="lead">Developing innovative research to transform agriculture for global sustainability and food security.</p>
+                    <div class="hero-ctas">
+                        <a href="/research.html" class="btn btn-primary">Our Research</a>
+                        <a href="/about.html" class="btn btn-secondary">Learn More</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="assets/images/placeholder.svg" alt="Diverse underutilised crops research">
+                </div>
+            </div>
+        </section>
+
+        <!-- Feature Grid Section -->
+        <section class="features">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Key Resources</h2>
+                    <p>Explore our tools and essential projects</p>
+                </div>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <h3>Crop Base Tool</h3>
+                        <p>Access our comprehensive database of underutilised crop information</p>
+                        <a href="/resources.html#cropbase" class="feature-link">Explore <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-microscope"></i>
+                        </div>
+                        <h3>Radiant Overview</h3>
+                        <p>EU H2020 RADIANT project for agrobiodiversity enhancement</p>
+                        <a href="/research.html#radiant" class="feature-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h3>Hemp Research</h3>
+                        <p>Pioneering research on hemp as a sustainable crop for the future</p>
+                        <a href="/research.html#hemp" class="feature-link">Discover <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <h3>Global Manifesto</h3>
+                        <p>Global Manifesto on Forgotten Foods to transform agricultural systems</p>
+                        <a href="/resources.html#manifesto" class="feature-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about-preview">
+            <div class="container">
+                <div class="about-content">
+                    <div class="section-header">
+                        <h2>About Us</h2>
+                    </div>
+                    <p class="featured-text">Our Vision: To be a world leader producing excellent, innovative research on underutilised crops that is responsive to societal demands.</p>
+                    <p>CFF closely mapped its plans to the United Nations 2030 Agenda for Sustainable Development, through world-class research that contributes to specific Sustainable Development Goals (SDGs). We focus our efforts where we can achieve the greatest impact by leveraging knowledge, capabilities and global partnerships.</p>
+                    <a href="/about.html" class="btn btn-secondary">Learn More About CFF</a>
+                </div>
+                <div class="about-image">
+                    <img src="assets/images/placeholder.svg" alt="CFF research and team">
+                </div>
+            </div>
+        </section>
+
+        <!-- Research Highlights Section -->
+        <section class="research-highlights">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Research Highlights</h2>
+                    <p>Our latest research innovations and discoveries</p>
+                </div>
+                <div class="research-slider">
+                    <div class="research-slide">
+                        <div class="research-image">
+                            <img src="assets/images/placeholder.svg" alt="Research on Bambara groundnut">
+                        </div>
+                        <div class="research-content">
+                            <h3>The Potential of Bambara Groundnut</h3>
+                            <p>Our analysis for the People's Republic of China shows significant opportunities for this underutilised legume.</p>
+                            <a href="/research.html#bambara" class="research-link">Read Research <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="research-slide">
+                        <div class="research-image">
+                            <img src="assets/images/placeholder.svg" alt="Hemp crop research">
+                        </div>
+                        <div class="research-content">
+                            <h3>Hemp as a Crop for the Future</h3>
+                            <p>Datasets for the development of hemp in tropical environments and diverse applications.</p>
+                            <a href="/research.html#hemp-tropical" class="research-link">View Research <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="research-nav">
+                    <button class="prev-btn" aria-label="Previous slide"><i class="fas fa-chevron-left"></i></button>
+                    <button class="next-btn" aria-label="Next slide"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                <div class="text-center">
+                    <a href="/research.html" class="btn btn-primary">View All Research</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Preview Section -->
+        <section class="team-preview">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Our Team</h2>
+                    <p>Meet our leadership and research experts</p>
+                </div>
+                <div class="team-grid">
+                    <div class="team-card">
+                        <div class="team-image">
+                            <img src="assets/images/placeholder.svg" alt="Professor Peter Gregory">
+                        </div>
+                        <div class="team-details">
+                            <h3>Prof. Peter Gregory</h3>
+                            <p class="team-role">Chair</p>
+                            <p class="team-bio">Emeritus Professor of Global Food Security at the University of Reading with extensive experience in soil science and agricultural research.</p>
+                            <div class="team-social">
+                                <a href="#" aria-label="ResearchGate profile"><i class="fab fa-researchgate"></i></a>
+                                <a href="mailto:example@cropsforthefutureuk.org" aria-label="Email Prof. Gregory"><i class="far fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-image">
+                            <img src="assets/images/placeholder.svg" alt="Dr. Sean Mayes">
+                        </div>
+                        <div class="team-details">
+                            <h3>Dr. Sean Mayes</h3>
+                            <p class="team-role">Secretary and Treasurer</p>
+                            <p class="team-bio">Associate Professor in Crop Genetics with expertise in quantitative and molecular crop genetics across various species.</p>
+                            <div class="team-social">
+                                <a href="#" aria-label="ResearchGate profile"><i class="fab fa-researchgate"></i></a>
+                                <a href="mailto:example@cropsforthefutureuk.org" aria-label="Email Dr. Mayes"><i class="far fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <a href="/about.html#team" class="btn btn-secondary">View Full Team</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Latest Updates Section -->
+        <section class="latest-updates">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Latest Updates</h2>
+                    <p>News and recent activities from Crops For the Future UK</p>
+                </div>
+                <div class="updates-grid">
+                    <div class="update-card">
+                        <div class="update-image">
+                            <img src="assets/images/placeholder.svg" alt="Financial Times Opinion Piece">
+                            <div class="update-tag">Opinion</div>
+                        </div>
+                        <div class="update-content">
+                            <h3>Financial Times Opinion Piece</h3>
+                            <p class="update-date">July 2022</p>
+                            <p>Read Prof. Sayed Azam-Ali's opinion piece in the Financial Times on the future of sustainable agriculture.</p>
+                            <a href="/updates.html#ft-opinion" class="update-link">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="update-card">
+                        <div class="update-image">
+                            <img src="assets/images/placeholder.svg" alt="Global Manifesto on Forgotten Foods">
+                            <div class="update-tag">Manifesto</div>
+                        </div>
+                        <div class="update-content">
+                            <h3>Global Manifesto on Forgotten Foods</h3>
+                            <p class="update-date">July 2021</p>
+                            <p>GFAR's Global Manifesto outlines a path forward for integrating forgotten foods into our agricultural systems.</p>
+                            <a href="/updates.html#global-manifesto" class="update-link">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <a href="/updates.html" class="btn btn-secondary">View All Updates</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Global Impact Map Section -->
+        <section class="global-impact">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Our Global Impact</h2>
+                    <p>Explore our research projects and partnerships worldwide</p>
+                </div>
+                <div class="map-container">
+                    <div id="impact-map" class="impact-map-placeholder">
+                        <!-- Interactive map will be loaded with JavaScript -->
+                        <img src="assets/images/placeholder.svg" alt="World map showing CFF's global impact and presence" class="placeholder-map">
+                    </div>
+                </div>
+                <div class="impact-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">20+</div>
+                        <div class="stat-label">Countries with Active Research</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Research Partners</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">100+</div>
+                        <div class="stat-label">Publications</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">30+</div>
+                        <div class="stat-label">Underutilised Crops Studied</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="newsletter">
+            <div class="container">
+                <div class="newsletter-content">
+                    <h2>Stay Updated</h2>
+                    <p>Subscribe to our newsletter for the latest research findings, news, and events</p>
+                    <form class="newsletter-form">
+                        <div class="form-group">
+                            <input type="email" placeholder="Your email address" required>
+                            <button type="submit" class="btn btn-primary">Subscribe</button>
+                        </div>
+                        <div class="form-consent">
+                            <input type="checkbox" id="consent" required>
+                            <label for="consent">I consent to receiving emails from Crops For the Future UK in accordance with the <a href="/privacy-policy.html">Privacy Policy</a>.</label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <img src="assets/images/cff-logo-white.svg" alt="Crops For the Future UK Logo" class="footer-logo">
+                    <p>Facilitating the wider use of underutilised crops for food security and sustainable agriculture.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="ResearchGate"><i class="fab fa-researchgate"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-nav">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about.html">About Us</a></li>
+                        <li><a href="/research.html">Research</a></li>
+                        <li><a href="/publications.html">Publications</a></li>
+                        <li><a href="/resources.html">Resources</a></li>
+                        <li><a href="/updates.html">Updates</a></li>
+                        <li><a href="/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-nav">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/resources.html#cropbase">Crop Base Tool</a></li>
+                        <li><a href="/resources.html#manifesto">Global Manifesto</a></li>
+                        <li><a href="/publications.html">Publications</a></li>
+                        <li><a href="/research.html#projects">Current Projects</a></li>
+                        <li><a href="/about.html#team">Our Team</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <address>
+                        <p><i class="fas fa-map-marker-alt"></i> CFF(UK)CIC, NIAB, 93 Lawrence Weaver Road, Cambridge, CB3 0LG, UK</p>
+                        <p><i class="fas fa-phone"></i> (+44) 785 035 0204</p>
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:sean.mayes@cropsforthefutureuk.org">sean.mayes@cropsforthefutureuk.org</a></p>
+                        <p><i class="fas fa-clock"></i> 8:30am - 7:00pm GMT</p>
+                    </address>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2023</span> Crops For the Future (CFF). All rights reserved.</p>
+                <ul class="footer-legal">
+                    <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="/terms.html">Terms of Use</a></li>
+                    <li><a href="/accessibility.html">Accessibility</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/test.js"></script>
+</body>
+</html> 

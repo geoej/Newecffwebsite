@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Crops For the Future UK</title>
+    <meta name="description" content="Learn about Crops For the Future UK, our vision, goals, and the team dedicated to research on underutilised crops.">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0a79ade6d4.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon">
+    <style>
+        /* Additional page-specific styles */
+        .page-header {
+            background-color: var(--bg-light);
+            padding: var(--spacing-xxl) 0;
+            margin-bottom: var(--spacing-xxl);
+        }
+        
+        .page-header h1 {
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .about-section {
+            margin-bottom: var(--spacing-xxl);
+        }
+        
+        .about-section:last-child {
+            margin-bottom: 0;
+        }
+        
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-xl);
+            align-items: center;
+        }
+        
+        .about-grid.reverse {
+            direction: rtl;
+        }
+        
+        .about-grid.reverse .about-content {
+            direction: ltr;
+        }
+        
+        .about-grid img {
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .goals-list {
+            list-style: none;
+            padding: 0;
+            margin: var(--spacing-lg) 0;
+        }
+        
+        .goals-list li {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .goals-list li::before {
+            content: "\f058";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            color: var(--primary-green);
+            position: absolute;
+            left: 0;
+            top: 0.25rem;
+        }
+        
+        .team-section {
+            background-color: var(--bg-light);
+            padding: var(--spacing-xxl) 0;
+        }
+        
+        .team-full-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--spacing-xl);
+            margin-top: var(--spacing-xl);
+        }
+        
+        .team-person {
+            background-color: var(--white);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: transform var(--transition-medium);
+        }
+        
+        .team-person:hover {
+            transform: translateY(-5px);
+        }
+        
+        .team-photo {
+            height: 250px;
+            overflow: hidden;
+        }
+        
+        .team-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .team-info {
+            padding: var(--spacing-lg);
+        }
+        
+        .team-role {
+            color: var(--primary-green);
+            font-weight: 600;
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .team-bio {
+            color: var(--text-light);
+            margin-bottom: var(--spacing-md);
+            font-size: 0.9rem;
+        }
+        
+        .team-social {
+            display: flex;
+            gap: var(--spacing-sm);
+        }
+        
+        .team-social a {
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--light-blue);
+            color: var(--primary-blue);
+            border-radius: var(--radius-circle);
+            transition: all var(--transition-fast);
+        }
+        
+        .team-social a:hover {
+            background-color: var(--primary-blue);
+            color: var(--white);
+        }
+        
+        @media (max-width: 992px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: var(--spacing-lg);
+            }
+            
+            .about-grid.reverse {
+                direction: ltr;
+            }
+            
+            .team-full-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .team-full-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="logo">
+                <a href="/">
+                    <img src="assets/images/cff-logo.svg" alt="Crops For the Future UK Logo">
+                </a>
+            </div>
+            <nav class="main-nav">
+                <button class="menu-toggle" aria-label="Toggle navigation menu">
+                    <span class="hamburger"></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about.html" class="active">About Us</a></li>
+                    <li><a href="/research.html">Research</a></li>
+                    <li><a href="/publications.html">Publications</a></li>
+                    <li><a href="/resources.html">Resources</a></li>
+                    <li><a href="/updates.html">Updates</a></li>
+                    <li><a href="/contact.html" class="btn btn-primary">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <div class="page-header">
+            <div class="container">
+                <h1>About Us</h1>
+                <p class="lead">Facilitating the wider use of underutilised crops for food security and sustainable agriculture.</p>
+            </div>
+        </div>
+        
+        <!-- Vision Section -->
+        <section class="about-section" id="vision">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-content">
+                        <h2>Our Vision</h2>
+                        <p class="featured-text">To be a world leader producing excellent, innovative research on underutilised crops that is responsive to societal demands.</p>
+                        <p>CFF closely mapped its plans to the United Nations 2030 Agenda for Sustainable Development, through world-class research that contributes to specific Sustainable Development Goals (SDGs). CFF is focusing its efforts where it can achieve the greatest impact by leveraging on knowledge, capabilities and global partnerships.</p>
+                        <p>This Roadmap is designed to enable sustainable long-term growth. By achieving its 2030 goals, CFF will continue to enhance its ability to develop solutions that will help transform agriculture for good.</p>
+                    </div>
+                    <div class="about-image">
+                        <img src="assets/images/placeholder.svg" alt="CFF vision and sustainable agriculture">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Goals Section -->
+        <section class="about-section" id="goals">
+            <div class="container">
+                <div class="about-grid reverse">
+                    <div class="about-content">
+                        <h2>Our Goals</h2>
+                        <p>At Crops For the Future UK, we have established clear, ambitious goals to guide our research and global impact. These goals align with the UN Sustainable Development Goals and reflect our commitment to transforming agriculture.</p>
+                        
+                        <ul class="goals-list">
+                            <li>To secure a greater role for underutilised crops in global agriculture, especially in developing regions of the world.</li>
+                            <li>Through our research, provide trusted knowledge on underutilised crops.</li>
+                            <li>With our partners, establish a global research community on underutilised crops.</li>
+                            <li>From our outputs, deliver innovative and useful products from underutilised crops.</li>
+                            <li>By our actions, develop evidence-based, sustainable applications using underutilised crops for society and environment.</li>
+                        </ul>
+                    </div>
+                    <div class="about-image">
+                        <img src="assets/images/placeholder.svg" alt="CFF goals and objectives">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- History Section -->
+        <section class="about-section" id="history">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-content">
+                        <h2>Our History</h2>
+                        <p>Crops For the Future (CFF) was established to address the critical need for agricultural diversification in the face of climate change and food security challenges. Our journey began with a simple yet powerful vision: to unlock the potential of underutilised crops that have been overlooked by mainstream agriculture.</p>
+                        <p>Founded by a coalition of scientists, agricultural experts, and sustainability advocates, CFF has grown from a small research initiative into a globally recognized organization with partnerships across continents.</p>
+                        <p>Throughout our history, we have maintained our commitment to rigorous scientific research, evidence-based approaches, and collaborative partnerships that span academia, industry, and government sectors.</p>
+                        <p>Today, CFF continues to evolve and expand its impact, bringing underutilised crops into the spotlight and demonstrating their potential to transform agriculture for a more sustainable and food-secure future.</p>
+                    </div>
+                    <div class="about-image">
+                        <img src="assets/images/placeholder.svg" alt="CFF history and development">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Team Section -->
+        <section class="team-section" id="team">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Our Team</h2>
+                    <p>Meet the dedicated experts leading our research and operations</p>
+                </div>
+                
+                <div class="team-full-grid">
+                    <!-- Team Member 1 -->
+                    <div class="team-person">
+                        <div class="team-photo">
+                            <img src="assets/images/placeholder.svg" alt="Professor Peter Gregory">
+                        </div>
+                        <div class="team-info">
+                            <h3>Prof. Peter Gregory</h3>
+                            <p class="team-role">Chair</p>
+                            <p class="team-bio">Prof. Peter Gregory is Emeritus Professor of Global Food Security at the University of Reading having previously been Professor of Soil Science at the same university. His role in CFF is to maintain oversight of the research activities of all research staff and to encourage research innovation.</p>
+                            <div class="team-social">
+                                <a href="#" aria-label="ResearchGate profile"><i class="fab fa-researchgate"></i></a>
+                                <a href="mailto:example@cropsforthefutureuk.org" aria-label="Email Prof. Gregory"><i class="far fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Team Member 2 -->
+                    <div class="team-person">
+                        <div class="team-photo">
+                            <img src="assets/images/placeholder.svg" alt="Dr. Sean Mayes">
+                        </div>
+                        <div class="team-info">
+                            <h3>Dr. Sean Mayes</h3>
+                            <p class="team-role">Secretary and Treasurer</p>
+                            <p class="team-bio">Following his BA in Natural Sciences (Genetics) at the University of Cambridge and PhD on the Genetic improvement of oil palm, Dr Mayes became International Group Leader, Genetics Department, University of Cambridge.</p>
+                            <div class="team-social">
+                                <a href="#" aria-label="ResearchGate profile"><i class="fab fa-researchgate"></i></a>
+                                <a href="mailto:sean.mayes@cropsforthefutureuk.org" aria-label="Email Dr. Mayes"><i class="far fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Team Member 3 -->
+                    <div class="team-person">
+                        <div class="team-photo">
+                            <img src="assets/images/placeholder.svg" alt="Professor George Rothschild">
+                        </div>
+                        <div class="team-info">
+                            <h3>Prof. George Rothschild</h3>
+                            <p class="team-role">Director and Board Member</p>
+                            <p class="team-bio">Professor George Rothschild is a dual British-Australian citizen with over 50 years of post-doctoral experience of research and development in low and middle income countries.</p>
+                            <div class="team-social">
+                                <a href="mailto:example@cropsforthefutureuk.org" aria-label="Email Prof. Rothschild"><i class="far fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Team Member 4 -->
+                    <div class="team-person">
+                        <div class="team-photo">
+                            <img src="assets/images/placeholder.svg" alt="Professor Sayed Azam-Ali">
+                        </div>
+                        <div class="team-info">
+                            <h3>Prof. Sayed Azam-Ali</h3>
+                            <p class="team-role">CEO</p>
+                            <p class="team-bio">Prof. Sayed Azam-Ali was appointed as the first Chief Executive Officer of Crops For the Future (CFF) in August 2011. In 2017, he was elected as Chair of the Association of International Research and Development Centers for Agriculture.</p>
+                            <div class="team-social">
+                                <a href="#" aria-label="Twitter profile"><i class="fab fa-twitter"></i></a>
+                                <a href="mailto:example@cropsforthefutureuk.org" aria-label="Email Prof. Azam-Ali"><i class="far fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Team Member 5 -->
+                    <div class="team-person">
+                        <div class="team-photo">
+                            <img src="assets/images/placeholder.svg" alt="Professor Graham King">
+                        </div>
+                        <div class="team-info">
+                            <h3>Prof. Graham King</h3>
+                            <p class="team-role">CFF Associate: CropStore</p>
+                            <p class="team-bio">Professor Graham King has over 35 years post-doctoral research and research management experience, with a widely recognized international profile in crop plant genetics, genomics and related bioinformatics and data management.</p>
+                            <div class="team-social">
+                                <a href="#" aria-label="ORCID profile"><i class="fab fa-orcid"></i></a>
+                                <a href="mailto:example@cropsforthefutureuk.org" aria-label="Email Prof. King"><i class="far fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Team Member 6 -->
+                    <div class="team-person">
+                        <div class="team-photo">
+                            <img src="assets/images/placeholder.svg" alt="Dr. Ebrahim Jahanshiri">
+                        </div>
+                        <div class="team-info">
+                            <h3>Dr. Ebrahim Jahanshiri</h3>
+                            <p class="team-role">CFF Associate: Head of CropBASE</p>
+                            <p class="team-bio">Dr. Ebrahim Jahanshiri oversees the research and development of prototype data driven solutions to support CFF's mission in facilitating wider adoption of underutilised crops within the context of global agricultural diversification initiative.</p>
+                            <div class="team-social">
+                                <a href="#" aria-label="ResearchGate profile"><i class="fab fa-researchgate"></i></a>
+                                <a href="#" aria-label="Twitter profile"><i class="fab fa-twitter"></i></a>
+                                <a href="mailto:example@cropsforthefutureuk.org" aria-label="Email Dr. Jahanshiri"><i class="far fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Partners Section -->
+        <section class="about-section" id="partners">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Our Partners</h2>
+                    <p>Working together to transform agriculture through collaboration</p>
+                </div>
+                
+                <p class="text-center">Crops For the Future UK works with a network of research institutions, universities, NGOs, and industry partners worldwide. Our collaborative approach allows us to leverage diverse expertise and resources to advance research on underutilised crops and develop practical applications.</p>
+                
+                <div class="partners-logos">
+                    <!-- This would be filled with actual partner logos in a real implementation -->
+                    <p class="text-center">Partner logos would be displayed here</p>
+                </div>
+                
+                <div class="text-center" style="margin-top: var(--spacing-xl);">
+                    <a href="/contact.html" class="btn btn-primary">Become a Partner</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <img src="assets/images/cff-logo-white.svg" alt="Crops For the Future UK Logo" class="footer-logo">
+                    <p>Facilitating the wider use of underutilised crops for food security and sustainable agriculture.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="ResearchGate"><i class="fab fa-researchgate"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-nav">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about.html">About Us</a></li>
+                        <li><a href="/research.html">Research</a></li>
+                        <li><a href="/publications.html">Publications</a></li>
+                        <li><a href="/resources.html">Resources</a></li>
+                        <li><a href="/updates.html">Updates</a></li>
+                        <li><a href="/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-nav">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/resources.html#cropbase">Crop Base Tool</a></li>
+                        <li><a href="/resources.html#manifesto">Global Manifesto</a></li>
+                        <li><a href="/publications.html">Publications</a></li>
+                        <li><a href="/research.html#projects">Current Projects</a></li>
+                        <li><a href="/about.html#team">Our Team</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <address>
+                        <p><i class="fas fa-map-marker-alt"></i> CFF(UK)CIC, NIAB, 93 Lawrence Weaver Road, Cambridge, CB3 0LG, UK</p>
+                        <p><i class="fas fa-phone"></i> (+44) 785 035 0204</p>
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:sean.mayes@cropsforthefutureuk.org">sean.mayes@cropsforthefutureuk.org</a></p>
+                        <p><i class="fas fa-clock"></i> 8:30am - 7:00pm GMT</p>
+                    </address>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2023</span> Crops For the Future (CFF). All rights reserved.</p>
+                <ul class="footer-legal">
+                    <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="/terms.html">Terms of Use</a></li>
+                    <li><a href="/accessibility.html">Accessibility</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 
